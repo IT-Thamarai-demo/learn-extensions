@@ -8,7 +8,18 @@
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+    <!-- Sidebar (Initially Hidden) -->
+    <div class="sidebar" id="sidebar">
+        <button id="close-sidebar">❌ Close</button>
+        <h2>📌 Saved Videos</h2>
+        <ul id="video-list"></ul>
+        <p id="no-videos" class="hidden">No saved videos.</p>
+    </div>
+
+    <!-- Main Content -->
     <div class="popup">
+        <button id="open-sidebar">📂 Show Saved Videos</button>
         <h1 class="typing-animation">🎥 Welcome! Custom Video Player</h1>
         <p>Add a YouTube video URL and navigate between saved videos.</p>
 
@@ -29,7 +40,7 @@
             </button>
         </div>
     </div>
-  <script src="popup.js"></script>
-    
+
+    <script src="popup.js"></script>
 </body>
 </html>
