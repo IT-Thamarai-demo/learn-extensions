@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Chrome Extension Video Player</title>
-    
-    <script src="background.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .video-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        video {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="video-container">
-        <video controls>
-            <source src="intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div class="popup">
+        <h1 class="typing-animation">🎥 Welcome! Custom Video Player</h1>
+        <p>Add a YouTube video URL and navigate between saved videos.</p>
+
+        <!-- Input to add a video -->
+        <input type="text" id="video-url" placeholder="Enter YouTube URL">
+        <button id="add-video">➕ Add Video</button>
+
+        <!-- Video Player -->
+        <iframe id="video-frame" width="300" height="200" frameborder="0" allowfullscreen></iframe>
+
+        <!-- Navigation Buttons -->
+        <div class="controls">
+            <button id="prev-video">
+                <img src="./icons/prev.png" alt="Previous">
+            </button>
+            <button id="next-video">
+                <img src="./icons/next.png" alt="Next">
+            </button>
+        </div>
     </div>
+  <script src="popup.js"></script>
+    
 </body>
 </html>
