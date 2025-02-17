@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Sidebar (Initially Hidden) -->
+    <div class="sidebar" id="sidebar">
+        <button id="close-sidebar">❌ Close</button>
+        <h2>📌 Saved Videos</h2>
+        <ul id="video-list"></ul>
+        <p id="no-videos" class="hidden">No saved videos.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="popup">
+        <button id="open-sidebar">📂 Show Saved Videos</button>
+        <h1 class="typing-animation">🎥 Welcome! Custom Video Player</h1>
+        <p>Add a YouTube video URL and navigate between saved videos.</p>
+
+        <!-- Input to add a video -->
+        <input type="text" id="video-url" placeholder="Enter YouTube URL">
+        <button id="add-video">➕ Add Video</button>
+
+        <!-- Video Player -->
+        <iframe id="video-frame" width="300" height="200" frameborder="0" allowfullscreen></iframe>
+
+        <!-- Navigation Buttons -->
+        <div class="controls">
+            <button id="prev-video">
+                <img src="./icons/prev.png" alt="Previous">
+            </button>
+            <button id="next-video">
+                <img src="./icons/next.png" alt="Next">
+            </button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
